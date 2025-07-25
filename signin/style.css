@@ -283,6 +283,10 @@ main {
     .mainTitle {
         font-size: 2.8em;
     }
+
+    .addUserBox {
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width: 540px) {
