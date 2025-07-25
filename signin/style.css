@@ -286,6 +286,24 @@ main {
 
     .addUserBox {
         padding: 20px;
+        padding-block: 40px;
+        gap: 20px;
+    }
+
+    .addUserTitle {
+        font-size: 1.8em;
+    }
+
+    .addUserInput {
+        font-size: 1em;
+    }
+
+    .addUserBtns {
+        gap: 5px;
+    }
+
+    .addUserBtns button {
+        font-size: 0.9em;
     }
 }
 
