@@ -1,0 +1,320 @@
+@font-face {
+    font-family: "he";
+    src: url(src/he.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+  user-select: none;
+  overscroll-behavior: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --darkgray: rgb(26, 26, 26);
+  --darkred: #c7992f; /*D5AC4E*/
+  --black: #000;
+  --white: #fff;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'he';
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  overscroll-behavior: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding-block: 180px;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    z-index: -1;
+}
+
+.logoTxt {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96px;
+    z-index: 10001;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mainTitle {
+    color: #fff;
+    font-size: 3.4em;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#usersCont {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.addBox {
+    position: relative;
+    background-color: rgba(15, 23, 42, 0.8);
+    border: 2px solid rgba(15, 23, 42, 0.8);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 484px;
+    height: 250px;
+    transition: 0.3s ease-in-out;
+}
+
+.addBox:hover {
+    transform: scale(0.98);
+    border: 2px solid #3b82f6;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.roundPlus .fa-plus {
+    color: #64748b;
+    background-color: #1e293b;
+    border: 2px dashed rgba(59, 130, 246, 0.2);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.fa-trash-can {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.fa-trash-can:hover {
+    color: #bd1313;
+}
+
+.addBox:hover .fa-trash-can {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fa-pen-to-square {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.fa-pen-to-square:hover {
+    color: #3b82f6;
+}
+
+.addBox:hover .fa-pen-to-square {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.roundUser {
+    color: #3b82f6;
+    background-color: rgba(15, 23, 42, 1);
+    border: 2px solid transparent;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2em;
+    transition: 0.3s ease-in-out;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.addBox:hover .roundUser {
+    border: 2px solid #3b82f6;
+}
+
+.addBox:hover .roundPlus .fa-plus {
+    background-color: #1e293b;
+    border: 2px dashed #3b82f6;
+    color: #3b82f6;
+}
+
+.addTxt {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#addUserWindow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.1s;
+}
+
+#addUserWindow.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.addUserBtns {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.addUserBtns button {
+    width: 50%;
+    padding: 15px;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.addUserCreate {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+}
+
+.addUserCancel {
+    background-color: #1e293b;
+    border: 2px solid rgba(59, 130, 246, 0.2);
+}
+
+.addUserBox {
+    position: relative;
+    padding: 60px;
+    background-color: #0f172a;
+    border: 2px solid rgba(59, 130, 246, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.addUserTitle {
+    color: #fff;
+    font-size: 2.4em;
+}
+
+.addUserInput {
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    background-color: #1e293b;
+    border: 2px solid rgba(59, 130, 246, 0.2);
+    color: #fff;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 680px) {
+    .mainTitle {
+        font-size: 2.8em;
+    }
+
+    .addUserBox {
+        padding: 20px;
+        padding-block: 40px;
+        gap: 20px;
+    }
+
+    .addUserTitle {
+        font-size: 1.8em;
+    }
+
+    .addUserInput {
+        font-size: 1em;
+    }
+
+    .addUserBtns {
+        gap: 5px;
+    }
+
+    .addUserBtns button {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .mainTitle {
+        font-size: 2.2em;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .mainTitle {
+        font-size: 1.6em;
+    }
+}

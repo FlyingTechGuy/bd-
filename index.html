@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="shortcut icon" type="image/png" href="src/logoImg.png">
+    <script src="https://kit.fontawesome.com/ceab6117ab.js" crossorigin="anonymous"></script>
+    <title>BOODOON- The Ultimate Library</title>
+</head>
+<body id="top">
+    <nav>
+        <ul>
+            <img src="src/logoImg.png" alt="" class="logo" draggable="false">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#shorts">Shorts</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="list/">My List</a></li>
+        </ul>
+        <button id="hamburgerBar" class="menu__icon"><span></span><span></span></button>
+        <img src="src/logoImg.png" alt="" class="logoMobile" draggable="false">
+        <div class="userBox" onclick="logout()">
+            <div class="userBoxIcon"><p id="userBoxIcon"></p></div>
+            <p id="userBoxTxt"></p>
+        </div>
+        <ol id="dropDownBar">
+            <li><a onclick="toggleMenu()" href="#top">Home</a></li>
+            <li><a onclick="toggleMenu()" href="#movies">Movies</a></li>
+            <li><a onclick="toggleMenu()" href="#shorts">Shorts</a></li>
+            <li><a onclick="toggleMenu()" href="#news">News</a></li>
+            <li><a onclick="toggleMenu()" href="list/">My List</a></li>
+        </ol>
+    </nav>
+    <section class="topMovieSec">
+        <div class="topMovieCont">
+            <p class="topTag">BooDoon- Original</p>
+            <p class="topTitle">Idan San - The Last Fighter</p>
+            <p class="topTxt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.</p>
+            <div class="topMeta">
+                <p>Movie</p>
+                <span>|</span>
+                <p>2025</p>
+                <span>|</span>
+                <p>Action</p>
+                <span>|</span>
+                <p>30+</p>
+                <span class="mob">|</span>
+                <p>9.8 <img class="imdbLogo" src="src/IMDB.png"></p>
+            </div>
+            <div class="topBtnBox">
+                <button class="playBtn"><i class="fa-solid fa-play" style="margin-right: 10px;"></i> Watch Now</button>
+                <button class="saveBtn" id="saveBtn" onclick="toggleSave(1)"><i class="fa-regular fa-bookmark" style="margin-right: 10px;"></i> Save To My List</button>
+            </div>
+        </div>
+    </section>
+    <section class="moviesSec">
+        <div class="gotag" id="movies"></div>
+        <p class="moviesTitle">Movies</p>
+        <div class="moviesCont">
+            <div class="movieBox">
+                <img class="movieImg" src="src/poster-fight.webp" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">Wavi VS Doon - Live Fight</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(0)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(0)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="movieBox">
+                <img class="movieImg" src="src/karate-kid-poster-05.webp" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">Idan San - The Last Fighter</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(1)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(1)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="moviesSec">
+        <div class="gotag" id="shorts"></div>
+        <p class="moviesTitle">Shorts</p>
+        <div class="moviesCont">
+            <div class="movieBox">
+                <img class="movieImg" src="src/poster-template.png" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">The Chase</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(2)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(2)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="movieBox">
+                <img class="movieImg" src="src/poster-template.png" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">Joovin Everywhere</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(3)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(3)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="movieBox">
+                <img class="movieImg" src="src/poster-template.png" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">First Day At School</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(4)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(4)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="movieBox">
+                <img class="movieImg" src="src/poster-template.png" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">A Compulsive Vacation</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(5)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(5)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="moviesSec">
+        <div class="gotag" id="news"></div>
+        <p class="moviesTitle">BooDoon News</p>
+        <div class="moviesCont">
+            <div class="movieBox">
+                <img class="movieImg" src="src/news.png" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">BooDoon News Episode I</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(6)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(6)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="movieBox">
+                <img class="movieImg" src="src/news.png" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">BooDoon News Episode II</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(7)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(7)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="movieBox">
+                <img class="movieImg" src="src/news.png" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">BooDoon News Episode III</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(8)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(8)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="movieBox">
+                <img class="movieImg" src="src/news.png" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">BooDoon News Episode IV</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(9)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(9)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="movieBox">
+                <img class="movieImg" src="src/news.png" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">BooDoon News Episode V</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(10)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(10)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="readMoreCont">
+        <div class="readMoreBox">
+            <i class="fa-solid fa-xmark" onclick="readMore()"></i>
+            <p id="readMoreTitle"></p>
+            <p id="readMoreTxt"></p>
+            <div class="readMoreMeta">
+                <p id="readMoreType"></p>
+                <span>|</span>
+                <p id="readMoreYear"></p>
+                <span>|</span>
+                <p id="readMoreGenre"></p>
+                <span>|</span>
+                <p id="readMoreAge"></p>
+                <span class="mob">|</span>
+                <p id="readMoreRate"><i class="fa-solid fa-star" style="color: #ffcc00;"></i></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
