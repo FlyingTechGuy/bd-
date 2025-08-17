@@ -163,6 +163,7 @@ ol li a:hover::after {
 
 .logo {
     width: 50px;
+    margin-right: 10px;
 }
 
 .logoMobile {
