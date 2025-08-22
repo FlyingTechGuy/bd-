@@ -16,7 +16,7 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: rgb(36, 45, 62);
+  background-color: rgb(34, 48, 73);
 }
  
 /* Handle */
@@ -52,7 +52,7 @@ body {
   overscroll-behavior: none;
   min-height: 100dvh;
   padding-block: 102px;
-  background: linear-gradient(135deg,rgba(4, 8, 17, 1) 0%, rgba(48, 76, 115, 1) 100%);
+  background: linear-gradient(135deg,rgba(4, 8, 17, 1) 0%, rgba(48, 76, 115, 1) 100%); /* background: linear-gradient(135deg, #040811 0%, #1e293b 50%, #334155 100%); */
 }
 
 nav {
@@ -291,7 +291,7 @@ ol li a:hover::after {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     padding-inline: 100px;
 }
 
@@ -316,7 +316,7 @@ ol li a:hover::after {
     color: #cbd5e1;
     font-size: 1.2em;
     font-weight: 500;
-    max-width: 500px;
+    max-width: 600px;
     line-height: 1.6;
 }
 
@@ -329,6 +329,7 @@ ol li a:hover::after {
     gap: 20px;
     color: #fff;
     font-size: 1.2em;
+    margin-block: 10px;
 }
 
 .topMeta p {
@@ -346,8 +347,8 @@ ol li a:hover::after {
 
 .imdbLogo {
     position: relative;
-    height: 20px;
-    margin-left: 12px;
+    height: 18px;
+    margin-left: 8px;
 }
 
 .topBtnBox {
@@ -356,7 +357,7 @@ ol li a:hover::after {
     align-items: center;
     justify-content: left;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
 }
 
 .playBtn {
@@ -559,7 +560,7 @@ ol li a:hover::after {
 
 .readMoreBox {
     position: relative;
-    padding: 60px;
+    padding: 40px;
     background-color: #0f172a;
     border: 2px solid rgba(59, 130, 246, 0.2);
     border-radius: 20px;
@@ -570,32 +571,74 @@ ol li a:hover::after {
     gap: 25px;
     width: 90%;
     max-width: 740px;
+    margin-top: 102px;
 }
 
 .fa-xmark {
     position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 1.8em;
+    top: -15px;
+    right: -15px;
+    background-color: #0f172a;
+    border: 2px solid rgba(59, 130, 246, 0.2);
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    font-size: 1.6em;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     transition: 0.3s;
     cursor: pointer;
 }
 
-.fa-xmark:hover {
-   color: #06b6d4;
-}
-
 #readMoreTitle {
     color: #fff;
     font-size: 1.8em;
+    margin-bottom: 4px;
 }
 
 #readMoreTxt {
-    color: #cbd5e1;
+    color: #dce4ef;
     font-size: 1.2em;
     font-weight: 500;
     line-height: 1.4;
+}
+
+.readMoreCredits {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#readMoreDirector,
+#readMoreEditor,
+#readMorePhotographer,
+#readMoreCast {
+    color: #dce4ef;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1.4;
+    display: flex;
+    gap: 10px;
+}
+
+#readMoreDirector span,
+#readMoreEditor span,
+#readMoreCast span,
+#readMorePhotographer span {
+    padding: 2px 12px;
+    background-color: #ffffff1a;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.readMoreCreditsNames {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .readMoreMeta {
@@ -607,6 +650,7 @@ ol li a:hover::after {
     gap: 20px;
     color: #fff;
     font-size: 1.2em;
+    margin-top: 4px;
 }
 
 .readMoreMeta p {
@@ -622,7 +666,7 @@ ol li a:hover::after {
     opacity: 0.5;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
     ul {
         display: none;
     }
@@ -642,7 +686,9 @@ ol li a:hover::after {
     #userBoxTxt {
         display: none;
     }
-    
+}
+
+@media screen and (max-width: 750px) {
     .topMovieCont {
         padding-inline: 40px;
         gap: 15px;
@@ -661,7 +707,6 @@ ol li a:hover::after {
     }
 
     .topMeta {
-        max-width: 280px;
         gap: 0px;
         column-gap: 14px;
         row-gap: 8px;
@@ -672,6 +717,16 @@ ol li a:hover::after {
         margin-top: 10px;
         flex-direction: column;
         align-items: start;
+        gap: 10px;
+    }
+
+    .playBtn:hover {
+        transform: translateX(4px);
+        box-shadow: 0px 0px 4px #06b6d4;
+    }
+    .saveBtn:hover {
+        transform: translateX(4px);
+        box-shadow: 0px 0px 4px #066dd4;
     }
 
     .playBtn,
@@ -686,21 +741,8 @@ ol li a:hover::after {
     }
 
     .readMoreBox {
-        padding: 30px;
-    }
-
-    .fa-xmark {
-        top: -15px;
-        right: -15px;
-        background-color: #0f172a;
-        border: 2px solid rgba(59, 130, 246, 0.2);
-        border-radius: 50%;
-        width: 52px;
-        height: 52px;
-        font-size: 1.6em;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
+        padding: 25px;
+        padding-right: 40px;
     }
 
     #readMoreTitle {
@@ -712,12 +754,14 @@ ol li a:hover::after {
     }
 
     .readMoreMeta {
-        max-width: 280px;
         gap: 14px;
         font-size: 1em;
     }
+}
 
-    .mob {
-        display: none;
+@media screen and (max-width: 490px) {
+    #readMoreCast {
+        flex-direction: column;
+        gap: 5px;
     }
 }

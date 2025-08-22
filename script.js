@@ -2,6 +2,10 @@ const moviesInfo = [
     {
         title: "Wavi VS Doon - Live Fight",
         txt: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.",
+        director: '<div class="readMoreCreditsNames"><span>Wavi</span><span>Doon</span></div>',
+        photographer: '<div class="readMoreCreditsNames"><span>Fishy</span><span>Argie</span></div>',
+        editor: '<div class="readMoreCreditsNames"><span>Argie</span></div>',
+        cast: '<div class="readMoreCreditsNames"><span>Wavi</span><span>Doon</span></div>',
         type: "Movie",
         year: "2025",
         genre: "Action",
@@ -9,8 +13,12 @@ const moviesInfo = [
         rate: " 9.2"
     },
     {
-        title: "Idan San - The Last Fighter",
+        title: "Idan San - The Sun and the Shadow",
         txt: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.",
+        director: '<div class="readMoreCreditsNames"><span>Wavi</span><span>Doon</span></div>',
+        photographer: '<div class="readMoreCreditsNames"><span>Fishy</span><span>Argie</span></div>',
+        editor: '<div class="readMoreCreditsNames"><span>Argie</span></div>',
+        cast: '<div class="readMoreCreditsNames"><span>Fishy</span><span>Wavi</span><span>Argie</span><span>Doon</span><span>Nuji</span></div>',
         type: "Movie",
         year: "2025",
         genre: "Action",
@@ -102,7 +110,7 @@ const moviesInfo = [
 
 function logout() {
     localStorage.setItem("bd-user", "");
-    window.location.replace("signin/");
+    window.location.replace("signin.html");
 }
 
 function markSavedMovies() {
@@ -127,7 +135,7 @@ function markSavedMovies() {
 
 function start() {
     if (localStorage.getItem("bd-user") == "" || localStorage.getItem("bd-user") == null) {
-        window.location.replace("signin/");
+        window.location.replace("signin.html");
     }
     let usernameTextList = localStorage.getItem("bd-user").split(" ");
     let usernameLogo = "";
@@ -144,9 +152,15 @@ start();
 
 function readMore(x) {
     document.getElementById("readMoreCont").classList.toggle("show");
+    document.querySelector("body").style.overflow = "auto";
     if (document.getElementById("readMoreCont").classList.contains("show")) {
+        document.querySelector("body").style.overflow = "hidden";
         document.getElementById("readMoreTitle").innerHTML = moviesInfo[x].title;
         document.getElementById("readMoreTxt").innerHTML = moviesInfo[x].txt;
+        document.getElementById("readMoreDirector").innerHTML = "Director: " + moviesInfo[x].director;
+        document.getElementById("readMorePhotographer").innerHTML = "Camera: " + moviesInfo[x].photographer;
+        document.getElementById("readMoreEditor").innerHTML = "Editor: " + moviesInfo[x].editor;
+        document.getElementById("readMoreCast").innerHTML = "Cast: " + moviesInfo[x].cast;
         document.getElementById("readMoreType").innerHTML = moviesInfo[x].type;
         document.getElementById("readMoreYear").innerHTML = moviesInfo[x].year;
         document.getElementById("readMoreGenre").innerHTML = moviesInfo[x].genre;

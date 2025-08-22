@@ -18,7 +18,7 @@
             <li><a href="#movies">Movies</a></li>
             <li><a href="#shorts">Shorts</a></li>
             <li><a href="#news">News</a></li>
-            <li><a href="list/">My List</a></li>
+            <li><a href="list.html">My List</a></li>
         </ul>
         <button id="hamburgerBar" class="menu__icon"><span></span><span></span></button>
         <img src="src/logoImg.png" alt="" class="logoMobile" draggable="false">
@@ -31,13 +31,13 @@
             <li><a onclick="toggleMenu()" href="#movies">Movies</a></li>
             <li><a onclick="toggleMenu()" href="#shorts">Shorts</a></li>
             <li><a onclick="toggleMenu()" href="#news">News</a></li>
-            <li><a onclick="toggleMenu()" href="list/">My List</a></li>
+            <li><a onclick="toggleMenu()" href="list.html">My List</a></li>
         </ol>
     </nav>
     <section class="topMovieSec">
         <div class="topMovieCont">
             <p class="topTag">BooDoon- Original</p>
-            <p class="topTitle">Idan San - The Last Fighter</p>
+            <p class="topTitle">Idan San - The Sun and the Shadow</p>
             <p class="topTxt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.</p>
             <div class="topMeta">
                 <p>Movie</p>
@@ -47,7 +47,7 @@
                 <p>Action</p>
                 <span>|</span>
                 <p>30+</p>
-                <span class="mob">|</span>
+                <span>|</span>
                 <p>9.8 <img class="imdbLogo" src="src/IMDB.png"></p>
             </div>
             <div class="topBtnBox">
@@ -74,7 +74,7 @@
             <div class="movieBox">
                 <img class="movieImg" src="src/karate-kid-poster-05.webp" alt="" draggable="false">
                 <div class="content">
-                    <p class="cardTitle">Idan San - The Last Fighter</p>
+                    <p class="cardTitle">Idan San - The Sun and the Shadow</p>
                     <div class="cardBtnBox">
                         <button class="moreInfo" onclick="readMore(1)"><i class="fa-solid fa-info"></i></button>
                         <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
@@ -89,7 +89,7 @@
         <p class="moviesTitle">Shorts</p>
         <div class="moviesCont">
             <div class="movieBox">
-                <img class="movieImg" src="src/poster-template.png" alt="" draggable="false">
+                <img class="movieImg" src="src/venom.webp" alt="" draggable="false">
                 <div class="content">
                     <p class="cardTitle">The Chase</p>
                     <div class="cardBtnBox">
@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div class="movieBox">
-                <img class="movieImg" src="src/poster-template.png" alt="" draggable="false">
+                <img class="movieImg" src="src/house.webp" alt="" draggable="false">
                 <div class="content">
                     <p class="cardTitle">Joovin Everywhere</p>
                     <div class="cardBtnBox">
@@ -111,7 +111,7 @@
                 </div>
             </div>
             <div class="movieBox">
-                <img class="movieImg" src="src/poster-template.png" alt="" draggable="false">
+                <img class="movieImg" src="src/school.webp" alt="" draggable="false">
                 <div class="content">
                     <p class="cardTitle">First Day At School</p>
                     <div class="cardBtnBox">
@@ -122,13 +122,24 @@
                 </div>
             </div>
             <div class="movieBox">
-                <img class="movieImg" src="src/poster-template.png" alt="" draggable="false">
+                <img class="movieImg" src="src/hotel.webp" alt="" draggable="false">
                 <div class="content">
-                    <p class="cardTitle">A Compulsive Vacation</p>
+                    <p class="cardTitle">One Night with Wavi</p>
                     <div class="cardBtnBox">
                         <button class="moreInfo" onclick="readMore(5)"><i class="fa-solid fa-info"></i></button>
                         <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
                         <button class="saveBtnR" onclick="toggleSave(5)"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="movieBox">
+                <img class="movieImg" src="src/short5.webp" alt="" draggable="false">
+                <div class="content">
+                    <p class="cardTitle">Wavi the Therapist</p>
+                    <div class="cardBtnBox">
+                        <button class="moreInfo" onclick="readMore(11)"><i class="fa-solid fa-info"></i></button>
+                        <button class="playBtnR"><i class="fa-solid fa-play"></i></button>
+                        <button class="saveBtnR" onclick="toggleSave(11)"><i class="fa-regular fa-bookmark"></i></button>
                     </div>
                 </div>
             </div>
@@ -139,7 +150,7 @@
         <p class="moviesTitle">BooDoon News</p>
         <div class="moviesCont">
             <div class="movieBox">
-                <img class="movieImg" src="src/news.png" alt="" draggable="false">
+                <img class="movieImg" src="src/news.webp" alt="" draggable="false">
                 <div class="content">
                     <p class="cardTitle">BooDoon News Episode I</p>
                     <div class="cardBtnBox">
@@ -150,7 +161,7 @@
                 </div>
             </div>
             <div class="movieBox">
-                <img class="movieImg" src="src/news.png" alt="" draggable="false">
+                <img class="movieImg" src="src/news.webp" alt="" draggable="false">
                 <div class="content">
                     <p class="cardTitle">BooDoon News Episode II</p>
                     <div class="cardBtnBox">
@@ -161,7 +172,7 @@
                 </div>
             </div>
             <div class="movieBox">
-                <img class="movieImg" src="src/news.png" alt="" draggable="false">
+                <img class="movieImg" src="src/news.webp" alt="" draggable="false">
                 <div class="content">
                     <p class="cardTitle">BooDoon News Episode III</p>
                     <div class="cardBtnBox">
@@ -172,7 +183,7 @@
                 </div>
             </div>
             <div class="movieBox">
-                <img class="movieImg" src="src/news.png" alt="" draggable="false">
+                <img class="movieImg" src="src/news.webp" alt="" draggable="false">
                 <div class="content">
                     <p class="cardTitle">BooDoon News Episode IV</p>
                     <div class="cardBtnBox">
@@ -183,7 +194,7 @@
                 </div>
             </div>
             <div class="movieBox">
-                <img class="movieImg" src="src/news.png" alt="" draggable="false">
+                <img class="movieImg" src="src/news.webp" alt="" draggable="false">
                 <div class="content">
                     <p class="cardTitle">BooDoon News Episode V</p>
                     <div class="cardBtnBox">
@@ -200,6 +211,12 @@
             <i class="fa-solid fa-xmark" onclick="readMore()"></i>
             <p id="readMoreTitle"></p>
             <p id="readMoreTxt"></p>
+            <div class="readMoreCredits">
+                <p id="readMoreDirector"></p>
+                <p id="readMorePhotographer"></p>
+                <p id="readMoreEditor"></p>
+                <p id="readMoreCast"></p>
+            </div>
             <div class="readMoreMeta">
                 <p id="readMoreType"></p>
                 <span>|</span>
@@ -208,7 +225,7 @@
                 <p id="readMoreGenre"></p>
                 <span>|</span>
                 <p id="readMoreAge"></p>
-                <span class="mob">|</span>
+                <span>|</span>
                 <p id="readMoreRate"><i class="fa-solid fa-star" style="color: #ffcc00;"></i></p>
             </div>
         </div>
