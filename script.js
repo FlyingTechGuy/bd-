@@ -271,12 +271,15 @@ function saveVideoSer(x) {
 
 function start() {
     let users = localStorage.getItem("bd-users");
-    if (users == null || users == "") {
-        return;
+    if (users == null) {
+        localStorage.setItem("bd-users", "");
+        users = localStorage.getItem("bd-users");
     }
-    let usersList = users.split("|");
-    for (let i = 0; i < usersList.length; i++) {
-        addUserStart(usersList[i]);
+    if (users != "") {
+        let usersList = users.split("|");
+        for (let i = 0; i < usersList.length; i++) {
+            addUserStart(usersList[i]);
+        }
     }
     if (document.getElementsByClassName("profilesScreenProfileCardBox").length == 6) {
         document.getElementById("profilesScreenAddProfileCardBox").style.display = "none";
