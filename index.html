@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;500;700;900&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="src/logoImg.png">
+    <script src="https://kit.fontawesome.com/ceab6117ab.js" crossorigin="anonymous"></script>
+    <title>BOODOON- The Ultimate Library</title>
+</head>
+<body id="top">
+    <section id="profilesScreen" class="profilesScreenCont hidden-layer">
+        <div class="profilesScreenBgBox">
+            <img src="src/profilesBg.jpeg" alt="Profiles Background" class="profilesScreenBgImg">
+            <div class="profilesScreenBgLg"></div>
+        </div>
+        <div class="profilesScreenBox">
+            <p class="profilesScreenTitle">Who is Watching Today?</p>
+            <div class="profilesScreenProfileCardsBox" id="usersCont">
+                <div class="profilesScreenAddProfileCardBox" id="profilesScreenAddProfileCardBox">
+                    <div class="profilesScreenAddProfileCard" onclick="addUserWindow()">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <p class="profilesScreenProfileTitle">Add Profile</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="addProfileCont" id="addProfileCont">
+        <div class="addProfileBox">
+            <p class="addProfileTitle">Create New Profile</p>
+            <input type="text" name="username" id="username" class="addProfileInput" placeholder="Enter Username">
+            <select name="profileImg" id="profileImg" class="addProfileInput">
+                <option value="-1" disabled selected>Choose Profile Image</option>
+                <option value="0">ahmadoon</option>
+                <option value="1">argietaychu</option>
+                <option value="2">ballman</option>
+                <option value="3">doon at the hotel</option>
+                <option value="4">doon the psychologist</option>
+                <option value="5">fishy the jurnalist</option>
+                <option value="6">idansun</option>
+                <option value="7">miwavi</option>
+                <option value="8">nujitsu</option>
+                <option value="9">rabi argie</option>
+                <option value="10">sushi</option>
+                <option value="11">the compacty</option>
+                <option value="12">wavi the rapist</option>
+                <option value="13">wavi the terapist</option>
+            </select>
+            <div class="addProfileBtnBox">
+                <button class="addUserCreate" onclick="addUser()">Create Profile</button>
+                <button class="addUserCancel" onclick="addUserWindow()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <section id="appScreen" class="appScreenCont hidden-layer">
+        <div id="appScreenNav" class="appScreenNavbarBox">
+            <nav class="appScreenNavbar">
+                <div class="appScreenNavLogoBox" id="appScreenNavLogoBox">
+                    <img src="src/logoImg.png" alt="Logo Image" class="appScreenNavLogoImg">
+                </div>
+                <div class="appScreenNavLinksBox">
+                    <a class="appScreenNavLink" id="appScreenNavLink1">Movies</a>
+                    <a class="appScreenNavLink" id="appScreenNavLink2">Shorts</a>
+                    <a class="appScreenNavLink" id="appScreenNavLink3">Series</a>
+                    <a class="appScreenNavLink" id="appScreenNavLink4">My List</a>
+                </div>
+                <div class="appScreenNavProfileBox" id="appScreenNavProfileBox">
+                    <img src="" alt="Profile Picture" class="appScreenNavProfileImg" id="appScreenNavProfileImg">
+                    <p class="appScreenNavProfileTxt" id="appScreenNavProfileTxt">Username</p>
+                </div>
+            </nav>
+            <div class="appScreenNavProfileDropdown" id="appScreenNavProfileDropdown">
+                <ul class="appScreenNavProfileDropdownBox">
+                    <li class="appScreenNavProfileDropdownLink" onclick="editUser()"><i class="fa-solid fa-user-pen"></i> Edit User Name</li>
+                    <li class="appScreenNavProfileDropdownLink" onclick="editProfilePic()"><i class="fa-solid fa-circle-user"></i> Edit Profile Picture</li>
+                    <li class="appScreenNavProfileDropdownLink appScreenNavProfileDropdownLinkRed" onclick="deleteUser()"><i class="fa-solid fa-trash-can"></i> Delete User</li>
+                    <li class="appScreenNavProfileDropdownLink appScreenNavProfileDropdownLinkRed" onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="appScreenBgBox">
+            <img src="src/homeBg.png" alt="Background Image" class="appScreenBgImg">
+            <div class="appScreenBgLg"></div>
+            <div class="appScreenBottomLg"></div>
+            <div class="appScreenTopLg"></div>
+            <div class="appScreenSideLg"></div>
+        </div>
+        <div class="appScreenContentCont">
+            <img src="src/karateOriginTitle.png" alt="Karate Origin Title" class="topMovieImg">
+            <div class="topMovieDetailsBox">
+                <p class="topMovieBlueBoxTxt">TOP 1 MOVIE</p>
+                <p class="topMovieSepDot">•</p>
+                <p class="topMovieGreenTxt">99% Match</p>
+                <p class="topMovieSepDot">•</p>
+                <p class="topMovieBlueTxt">2025</p>
+                <p class="topMovieSepDot">•</p>
+                <p class="topMovieGrayBoxTxt">4K UHD</p>
+                <p class="topMovieGrayBoxTxt">ATMOS</p>
+                <p class="topMovieGrayBoxTxt">3D IMAX</p>
+            </div>
+            <p class="topMovieDescription">A young boy dreams of becoming a world karate champion, but his dream changes when he discovers a force that threatens to destroy the world and the only thing that will stop it is karate.</p>
+            <div class="topMovieBtnBox">
+                <button class="topMovieBlueBtn" onclick=""><i class="fa-solid fa-play" style="margin-right: 10px;"></i> Watch Now</button>
+                <button class="topMovieGrayBtn" onclick="toggleMoreInfoR(0)"><i class="fa-solid fa-circle-info" style="margin-right: 10px;"></i> More Info</button>
+            </div>
+            <p class="appScreenTypeTitle">Movies<span class="appScreenTpSpan" id="appScreenTpMovies"></span></p>
+            <div class="appScreenTypeBox">
+                <div class="appScreenHorizontalRect">
+                    <img src="src/karateoriginThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">Karate Origin</p>
+                        <p class="appScreenHorizontalRectSubtitle">Wave Of A Soul</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">99% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2025</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">ATMOS</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">3D</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(0)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect">
+                    <img src="src/wavivsdoonThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">WAVI vs DOON</p>
+                        <p class="appScreenHorizontalRectSubtitle">The Final Round</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">95% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2024</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(1)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="appScreenTypeTitle">Shorts<span class="appScreenTpSpan" id="appScreenTpShorts"></span></p>
+            <div class="appScreenTypeBox">
+                <div class="appScreenHorizontalRect">
+                    <img src="src/wavithetherapistThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">Wavi The Therapist</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">92% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2025</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick="toggleVideoBoxR(2)"><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(2)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect">
+                    <img src="src/onenightwithwaviThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">One Night With Wavi</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">94% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2021</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(3)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect">
+                    <img src="src/venomThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">Venom - Let the chase begin</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">93% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2021</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(4)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="appScreenTypeTitle">Series<span class="appScreenTpSpan" id="appScreenTpSeries"></span></p>
+            <div class="appScreenTypeBox">
+                <div class="appScreenHorizontalRect">
+                    <img src="src/boodoonnewsThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">BooDoon News</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">97% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2025</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtnV" onclick="toggleMoreInfoS(0)"><i class="fa-solid fa-list-ul" style="margin-right: 8px;"></i> Episodes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect">
+                    <img src="src/compacteamThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">The Compacteam</p>
+                        <p class="appScreenHorizontalRectSubtitle">Size Doesn't Matter</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">96% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2026</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtnV" onclick="toggleMoreInfoS(1)"><i class="fa-solid fa-list-ul" style="margin-right: 8px;"></i> Episodes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="appScreenTypeTitle">My List<span class="appScreenTpSpan" id="appScreenTpMyList"></span></p>
+            <div class="appScreenTypeBox">
+                <p id="appScreenMyListEmptyMsg">Your list is empty...<br>Save videos to watch them later!</p>
+                <div class="appScreenHorizontalRect savedVideoCard" id="KarateOrigin">
+                    <img src="src/karateoriginThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">Karate Origin</p>
+                        <p class="appScreenHorizontalRectSubtitle">Wave Of A Soul</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">99% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2025</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">ATMOS</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">3D</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(0)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect savedVideoCard" id="WAVIvsDOON">
+                    <img src="src/wavivsdoonThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">WAVI vs DOON</p>
+                        <p class="appScreenHorizontalRectSubtitle">The Final Round</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">95% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2024</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(1)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect savedVideoCard" id="WaviTheTherapist">
+                    <img src="src/wavithetherapistThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">Wavi The Therapist</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">92% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2025</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(2)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect savedVideoCard" id="OneNightWithWavi">
+                    <img src="src/onenightwithwaviThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">One Night With Wavi</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">94% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2021</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(3)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect savedVideoCard" id="Venom-LetTheChaseBegin">
+                    <img src="src/venomThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">Venom - Let the chase begin</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">93% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2021</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(4)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect savedVideoCard" id="BooDoonNews">
+                    <img src="src/boodoonnewsThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">BooDoon News</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">97% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2025</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtnV" onclick="toggleMoreInfoS(0)"><i class="fa-solid fa-list-ul" style="margin-right: 8px;"></i> Episodes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect savedVideoCard" id="TheCompacteam">
+                    <img src="src/compacteamThumbnail.png" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">The Compacteam</p>
+                        <p class="appScreenHorizontalRectSubtitle">Size Doesn't Matter</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">96% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2026</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtnV" onclick="toggleMoreInfoS(1)"><i class="fa-solid fa-list-ul" style="margin-right: 8px;"></i> Episodes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="changeProfilePicCont" id="changeProfilePicCont">
+        <div class="changeProfilePicBox">
+            <p class="changeProfilePicTitle">Change Profile Picture</p>
+            <select name="profilePic" id="profilePic" class="changeProfilePicInput">
+                <option value="-1" disabled selected>Choose Profile Image</option>
+                <option value="0">ahmadoon</option>
+                <option value="1">argietaychu</option>
+                <option value="2">ballman</option>
+                <option value="3">doon at the hotel</option>
+                <option value="4">doon the psychologist</option>
+                <option value="5">fishy the jurnalist</option>
+                <option value="6">idansun</option>
+                <option value="7">miwavi</option>
+                <option value="8">nujitsu</option>
+                <option value="9">rabi argie</option>
+                <option value="10">sushi</option>
+                <option value="11">the compacty</option>
+                <option value="12">wavi the rapist</option>
+                <option value="13">wavi the terapist</option>
+            </select>
+            <div class="changeProfilePicBtnBox">
+                <button class="addUserCreate" onclick="saveProfilePic()">Save</button>
+                <button class="addUserCancel" onclick="editProfilePic()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="moreInfoRegCont" id="moreInfoRegCont">
+        <div id="moreInfoRegBgPress"></div>
+        <div class="moreInfoRegBox">
+            <div class="moreInfoRegImgBox">
+                <button id="moreInfoRegXbtn" onclick="toggleMoreInfoR()"><i class="fa-solid fa-xmark"></i></button>
+                <img src="src/karateoriginThumbnail.png" alt="Thumbnail" id="moreInfoRegImg">
+                <div class="moreInfoRegTopBox">
+                    <p id="moreInfoRegTitle">Karate Origin</p>
+                    <p id="moreInfoRegSubtitle">Wave Of A Soul</p>
+                    <div class="moreInfoRegBtnBox">
+                        <button class="moreInfoRegBlueBtn" id="playBtnR"><i class="fa-solid fa-play" style="margin-right: 10px;"></i> Play</button>
+                        <button class="moreInfoRegGrayBtn" id="saveBtnR"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="moreInfoRegInfoBox">
+                <div class="moreInfoRegInfoBoxRight">
+                    <div class="moreInfoRegDetailsBox">
+                        <p class="moreInfoRegBlueBoxTxt" id="moreInfoRegType">MOVIE</p>
+                        <p class="moreInfoRegSepDot">•</p>
+                        <p class="moreInfoRegGrayTxt" id="moreInfoRegYear">2025</p>
+                        <p class="moreInfoRegSepDot">•</p>
+                        <p class="moreInfoRegGrayFillTxt" id="moreInfoRegAge">13+</p>
+                        <p class="moreInfoRegSepDot">•</p>
+                        <p class="moreInfoRegGrayBoxTxt" id="moreInfoRegRes">4K UHD</p>
+                        <p class="moreInfoRegGrayBoxTxt" id="moreInfoRegSound">ATMOS</p>
+                        <p class="moreInfoRegGrayBoxTxt" id="moreInfoRegImax">3D IMAX</p>
+                    </div>
+                    <div class="moreInfoRegTxtBox">
+                        <p id="moreInfoRegDescription">A young boy dreams of becoming a world karate champion, but his dream changes when he discovers a force that threatens to destroy the world and the only thing that will stop it is karate.</p>
+                    </div>
+                </div>
+                <div class="moreInfoRegInfoBoxLeft">
+                    <p class="moreInfoRegCast">Director: <span id="moreInfoRegDirector">Wavi, Doon</span></p>
+                    <p class="moreInfoRegCast">Cast: <span id="moreInfoRegCast">Fishy, Wavi, Argie, Doon, Nuji</span></p>
+                    <p class="moreInfoRegCast">Photographer: <span id="moreInfoRegPhotographer">Fishy, Argie</span></p>
+                    <p class="moreInfoRegCast">Editor: <span id="moreInfoRegEditor">Argie</span></p>
+                    <p class="moreInfoRegCast">Genres: <span id="moreInfoRegGenres">Action, Drama, Adventure</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="moreInfoRegCont" id="moreInfoSerCont">
+        <div id="moreInfoSerBgPress"></div>
+        <div class="moreInfoRegBox">
+            <div class="moreInfoRegImgBox">
+                <button id="moreInfoSerXbtn" onclick="toggleMoreInfoS()"><i class="fa-solid fa-xmark"></i></button>
+                <img src="src/boodoonnewsThumbnail.png" alt="Thumbnail" id="moreInfoSerImg">
+                <div class="moreInfoRegTopBox">
+                    <p id="moreInfoSerTitle">BooDoon News</p>
+                    <p id="moreInfoSerSubtitle">BooDoon News</p>
+                    <div class="moreInfoRegBtnBox">
+                        <button class="moreInfoRegBlueBtn" onclick=""><i class="fa-solid fa-play" style="margin-right: 10px;"></i> Play First Episode</button>
+                        <button class="moreInfoRegGrayBtn" id="saveBtnS" onclick=""><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="moreInfoRegInfoBox">
+                <div class="moreInfoRegInfoBoxRight">
+                    <div class="moreInfoRegDetailsBox">
+                        <p class="moreInfoRegBlueBoxTxt" id="moreInfoSerType">SERIES</p>
+                        <p class="moreInfoRegSepDot">•</p>
+                        <p class="moreInfoRegGrayTxt" id="moreInfoSerYear">2025</p>
+                        <p class="moreInfoRegSepDot">•</p>
+                        <p class="moreInfoRegGrayFillTxt" id="moreInfoSerAge">13+</p>
+                        <p class="moreInfoRegSepDot">•</p>
+                        <p class="moreInfoRegGrayBoxTxt" id="moreInfoSerRes">4K UHD</p>
+                        <p class="moreInfoRegGrayBoxTxt" id="moreInfoSerSound">ATMOS</p>
+                        <p class="moreInfoRegGrayBoxTxt" id="moreInfoSerImax">3D IMAX</p>
+                    </div>
+                    <div class="moreInfoRegTxtBox">
+                        <p id="moreInfoSerDescription">A young boy dreams of becoming a world karate champion, but his dream changes when he discovers a force that threatens to destroy the world and the only thing that will stop it is karate.</p>
+                    </div>
+                    <div class="moreInfoSerSepLine"></div>
+                    <div class="moreInfoSerEpisodesCont">
+                        <p class="moreInfoSerEpisodesTitle">Episodes</p>
+                        <div class="moreInfoSerEpisodesBox" id="moreInfoSerEpisodesBox">
+                            <!-- <div class="moreInfoSerEpisodeBox">
+                                <p class="moreInfoSerEpisodeNum">1</p>
+                                <img src="src/boodoonnewsThumbnail.png" alt="" class="moreInfoSerEpisodeImg">
+                                <div class="moreInfoSerEpisodeContentBox">
+                                    <p class="moreInfoSerEpisodeTitle">First Episode</p>
+                                    <p class="moreInfoSerEpisodeTime">25m 34s</p>
+                                </div>
+                            </div>
+                            <div class="moreInfoSerEpisodeBox">
+                                <p class="moreInfoSerEpisodeNum">2</p>
+                                <img src="src/boodoonnewsThumbnail.png" alt="" class="moreInfoSerEpisodeImg">
+                                <div class="moreInfoSerEpisodeContentBox">
+                                    <p class="moreInfoSerEpisodeTitle">Second Episode</p>
+                                    <p class="moreInfoSerEpisodeTime">23m 48s</p>
+                                </div>
+                            </div>
+                            <div class="moreInfoSerEpisodeBox">
+                                <p class="moreInfoSerEpisodeNum">3</p>
+                                <img src="src/boodoonnewsThumbnail.png" alt="" class="moreInfoSerEpisodeImg">
+                                <div class="moreInfoSerEpisodeContentBox">
+                                    <p class="moreInfoSerEpisodeTitle">Third Episode</p>
+                                    <p class="moreInfoSerEpisodeTime">27m 12s</p>
+                                </div>
+                            </div>
+                            <div class="moreInfoSerEpisodeBox">
+                                <p class="moreInfoSerEpisodeNum">4</p>
+                                <img src="src/boodoonnewsThumbnail.png" alt="" class="moreInfoSerEpisodeImg">
+                                <div class="moreInfoSerEpisodeContentBox">
+                                    <p class="moreInfoSerEpisodeTitle">Forth Episode</p>
+                                    <p class="moreInfoSerEpisodeTime">21m 09s</p>
+                                </div>
+                            </div>
+                            <div class="moreInfoSerEpisodeBox">
+                                <p class="moreInfoSerEpisodeNum">5</p>
+                                <img src="src/boodoonnewsThumbnail.png" alt="" class="moreInfoSerEpisodeImg">
+                                <div class="moreInfoSerEpisodeContentBox">
+                                    <p class="moreInfoSerEpisodeTitle">Fifth Episode</p>
+                                    <p class="moreInfoSerEpisodeTime">32m 29s</p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="moreInfoRegInfoBoxLeft">
+                    <p class="moreInfoRegCast">Director:<span id="moreInfoSerDirector">Wavi, Doon</span></p>
+                    <p class="moreInfoRegCast">Cast:<span id="moreInfoSerCast">Fishy, Wavi, Argie, Doon, Nuji</span></p>
+                    <p class="moreInfoRegCast">Photographer:<span id="moreInfoSerPhotographer">Fishy, Argie</span></p>
+                    <p class="moreInfoRegCast">Editor:<span id="moreInfoSerEditor">Argie</span></p>
+                    <p class="moreInfoRegCast">Genres:<span id="moreInfoSerGenres">Comedy</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="videoCont" id="videoCont">
+        <div id="videoContBgPress"></div>
+        <div class="videoBox">
+            <div id="videoXmark"><i class="fa-solid fa-xmark"></i></div>
+            <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ni_PoWFpNFk?si=fXPefyhQ0i1-b_PB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ni_PoWFpNFk?si=JdiXFvVw_xymqPMX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            <iframe 
+                id="videoBoxSrc"
+                width="560" 
+                height="315" 
+                src=""
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe> <!-- onclick="toggleVideoBox()" -->
+        </div>
+    </div>
+    <div class="bttBtnBox">
+        <button class="bttBtn" id="bttBtn"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
