@@ -112,6 +112,7 @@ body {
     object-fit: cover;
     opacity: 0.2;
     filter: blur(100px);
+    pointer-events: none;
 }
 
 .profilesScreenBgLg {
@@ -241,6 +242,7 @@ body {
     height: 100%;
     object-fit: cover;
     transition: 0.3s;
+    pointer-events: none;
 }
 
 .profilesScreenProfileCard:hover .profilesScreenProfileCardImg {
@@ -435,6 +437,7 @@ body {
     position: relative;
     width: 40px;
     margin-left: 20px;
+    pointer-events: none;
 }
 
 .appScreenNavLinksBox {
@@ -984,6 +987,7 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    pointer-events: none;
 }
 
 .appScreenHorizontalRectBox {
