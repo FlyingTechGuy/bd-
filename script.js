@@ -333,7 +333,7 @@ const regInfo = [
         res: "V",
         sound: "V",
         imax: "V",
-        img: "src/karateoriginThumbnail.png"
+        img: "src/karateoriginThumbnail.webp"
     },
     {
         title: "WAVI vs DOON",
@@ -350,7 +350,7 @@ const regInfo = [
         res: "V",
         sound: "X",
         imax: "X",
-        img: "src/wavivsdoonThumbnail.png"
+        img: "src/wavivsdoonThumbnail.webp"
     },
     {
         title: "Wavi The Therapist",
@@ -367,7 +367,7 @@ const regInfo = [
         res: "V",
         sound: "X",
         imax: "X",
-        img: "src/wavithetherapistThumbnail.png",
+        img: "src/wavithetherapistThumbnail.webp",
         src: "https://www.youtube.com/embed/ni_PoWFpNFk?si=JdiXFvVw_xymqPMX"
     },
     {
@@ -385,7 +385,7 @@ const regInfo = [
         res: "V",
         sound: "X",
         imax: "X",
-        img: "src/onenightwithwaviThumbnail.png"
+        img: "src/onenightwithwaviThumbnail.webp"
     },
     {
         title: "Venom - Let the chase begin",
@@ -402,7 +402,7 @@ const regInfo = [
         res: "V",
         sound: "X",
         imax: "X",
-        img: "src/venomThumbnail.png"
+        img: "src/venomThumbnail.webp"
     },
     {
         title: "Joovin Everywhere",
@@ -419,7 +419,7 @@ const regInfo = [
         res: "V",
         sound: "X",
         imax: "X",
-        img: "src/wavivsdoonThumbnail.png"
+        img: "src/wavivsdoonThumbnail.webp"
     },
     {
         title: "First Day At School",
@@ -436,7 +436,7 @@ const regInfo = [
         res: "V",
         sound: "X",
         imax: "X",
-        img: "src/wavivsdoonThumbnail.png"
+        img: "src/wavivsdoonThumbnail.webp"
     }
 ];
 
@@ -456,7 +456,7 @@ const serInfo = [
         res: "V",
         sound: "X",
         imax: "X",
-        img: "src/boodoonnewsThumbnail.png",
+        img: "src/boodoonnewsThumbnail.webp",
         episodes: [["Episode I","25m 34s"],["Episode II","23m 48s"],["Episode III","27m 12s"],["Episode IV","21m 09s"],["Episode V","32m 29s"],["Episode VI","20m 17s","https://www.youtube.com/embed/C9XQAjCXpjo?si=jr4kZju8i6mu5xJc"]]
     },
     {
@@ -474,7 +474,7 @@ const serInfo = [
         res: "V",
         sound: "X",
         imax: "X",
-        img: "src/compacteamThumbnail.png",
+        img: "src/compacteamThumbnail.webp",
         episodes: [["First Episode","25m 34s"],["Second Episode","23m 48s"],["Third Episode","27m 12s"]]
     }
 ];
