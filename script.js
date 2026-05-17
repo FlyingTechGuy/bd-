@@ -306,13 +306,13 @@ start();
 
 function selectUser(x) {
     localStorage.setItem("bd-user", x);
-    document.getElementById("appScreenNavLogoBox").style.width = document.getElementById("appScreenNavProfileBox").offsetWidth + "px";
     document.getElementById("profilesScreen").classList.remove("visible-layer");
     document.getElementById("profilesScreen").classList.add("hidden-layer");
     document.getElementById("appScreen").classList.add("visible-layer");
     document.getElementById("appScreen").classList.remove("hidden-layer");
     document.getElementById("appScreenNavProfileTxt").innerHTML = x.split("~")[0];
     document.getElementById("appScreenNavProfileImg").src = "src/" + x.split("~")[1];
+    document.getElementById("appScreenNavLogoBox").style.width = document.getElementById("appScreenNavProfileBox").offsetWidth + "px";
     updateMyList();
 }
 

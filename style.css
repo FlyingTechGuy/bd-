@@ -37,6 +37,7 @@ html {
     scroll-behavior: smooth;
     user-select: none;
     overflow: hidden;
+    color-scheme: dark;
 }
 
 body {
@@ -297,10 +298,10 @@ body {
     gap: 16px;
     background-color: #0f172a;
     border: 2px solid rgba(59, 130, 246, 0.2);
-    backdrop-filter: 20px;
     padding: 40px;
     border-radius: 16px;
     transition: 0.3s;
+    max-width: calc(100% - 40px);
 }
 
 .addProfileTitle {
@@ -331,12 +332,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    width: 400px;
+    width: 100%; /* 400px */
 }
 
 .addProfileBtnBox button {
     width: 50%;
-    padding: 16px 32px;
+    padding: 16px 12px;
     font-size: 18px;
     font-weight: 700;
     font-family: var(--font-body);
@@ -610,10 +611,10 @@ body {
     gap: 16px;
     background-color: #0f172a;
     border: 2px solid rgba(59, 130, 246, 0.2);
-    backdrop-filter: 20px;
     padding: 40px;
     border-radius: 16px;
     transition: 0.3s;
+    max-width: calc(100% - 40px);
 }
 
 .changeProfilePicTitle {
@@ -650,7 +651,7 @@ body {
 
 .changeProfilePicBtnBox button {
     width: 50%;
-    padding: 16px 32px;
+    padding: 16px 12px;
     font-size: 18px;
     font-weight: 700;
     font-family: var(--font-body);
@@ -947,6 +948,17 @@ body {
     width: 100%;
     padding: 10px 0px;
     margin-bottom: 40px;
+}
+
+.appScreenTypeBox::-webkit-scrollbar {
+    height: 3px;
+}
+.appScreenTypeBox::-webkit-scrollbar-track {
+    display: none;
+}
+.appScreenTypeBox::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.135);
+    border-radius: 20px;
 }
 
 #appScreenMyListEmptyMsg {
@@ -1823,5 +1835,44 @@ body {
     .topMovieGrayBtn {
         width: auto;
         text-align: left;
+    }
+}
+
+@media screen and (max-width: 536px) {
+    .changeProfilePicBox {
+        width: calc(100% - 40px);
+    }
+    
+    .changeProfilePicTitle {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 461px) {
+    .addProfileBox {
+        width: calc(100% - 40px);
+    }
+
+    .addProfileTitle {
+        font-size: 1.6em;
+    }
+
+    .addUserCreate span {
+        display: none;
+    }
+    
+    .addProfileBtnBox button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .moreInfoRegTopBox {
+        padding: 25px;
+    }
+
+    .moreInfoRegInfoBox {
+        padding: 25px;
+        padding-top: 40px;
     }
 }
