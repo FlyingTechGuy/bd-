@@ -45,8 +45,13 @@ select {
 }
 
 select option {
-    background-color: #ffffff !important;
-    color: #000000 !important;
+    background-color: #0f172a !important;
+    color: #fff !important;
+}
+
+select option:checked {
+    background-color: #2563eb !important;
+    color: #fff !important;
 }
 
 body {
