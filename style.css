@@ -40,6 +40,15 @@ html {
     color-scheme: dark;
 }
 
+select {
+    forced-color-adjust: none;
+}
+
+select option {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
@@ -1794,7 +1803,7 @@ body {
     }
     
     .moreInfoSerEpisodeNum {
-        padding-left: 15px;
+        padding-left: 25px;
     }
 }
 
@@ -1867,6 +1876,11 @@ body {
 }
 
 @media screen and (max-width: 420px) {
+    .moreInfoRegBlueBtn {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
     .moreInfoRegTopBox {
         padding: 25px;
     }
@@ -1874,5 +1888,10 @@ body {
     .moreInfoRegInfoBox {
         padding: 25px;
         padding-top: 40px;
+    }
+
+    .moreInfoSerEpisodeImg {
+        width: 65px;
+        height: 80px;
     }
 }
