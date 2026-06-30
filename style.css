@@ -100,7 +100,7 @@ body {
     height: 100%;
     /* min-height: 100vh; */
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
     padding: 100px 50px;
     display: flex;
     align-items: center;
@@ -270,6 +270,10 @@ body {
     font-size: 1.25rem;
     font-family: var(--font-body);
     transition: 0.3s;
+    width: 192px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .profilesScreenProfileCard:hover ~ .profilesScreenProfileTitle,
@@ -378,15 +382,49 @@ body {
     background-color: #ffffff24;
 }
 
-@media screen and (max-width: 755px) {
-    .profilesScreenTitle {
-        margin-top: 250px;
-    }
-}
 
-@media screen and (max-width: 523px) {
+@media screen and (max-width: 820px) {
+    .profilesScreenCont {
+        padding: 50px 20px;
+    }
+    .profilesScreenBox {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
     .profilesScreenTitle {
-        margin-top: 1150px;
+        font-size: 1.8em;
+        margin-bottom: 0px;
+    }
+    .profilesScreenProfileCardsBox {
+        max-width: 400px;
+        gap: 20px 20px;
+    }
+    .profilesScreenProfileCardBox,
+    .profilesScreenAddProfileCardBox {
+        width: 100px;
+        max-width: 100px;
+        gap: 8px;
+    }
+    .profilesScreenProfileCard,
+    .profilesScreenAddProfileCard {
+        width: 90px;
+        height: 90px;
+        border-radius: 15px;
+    }
+    .profilesScreenProfileTitle {
+        font-size: 0.9rem;
+        width: 90px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .profilesScreenAddProfileCard .fa-plus {
+        font-size: 2.4em;
     }
 }
 
@@ -811,7 +849,9 @@ body {
 
 .topMovieImg {
     position: relative;
-    width: 560px;
+    width: 500px;
+    margin-top: -20px;
+    margin-bottom: 20px;
     pointer-events: none;
     user-select: none;
 }
@@ -1812,19 +1852,13 @@ body {
     }
 }
 
-@media screen and (max-width: 820px) {
-    .profilesScreenTitle {
-        font-size: 1.8em;
-    }
-}
-
 @media screen and (max-width: 800px) {
     .appScreenContentCont {
         padding: 35px;
     }
     
     .topMovieImg {
-        width: 85%;
+        width: 80%;
         max-width: 440px;
     }
 
@@ -1839,16 +1873,21 @@ body {
         width: 100%;
         flex-wrap: wrap;
         justify-content: start;
+        gap: 12px;
     }
 
     .topMovieBlueBtn {
         width: auto;
         text-align: left;
+        padding: 16px 24px;
+        font-size: 14px;
     }
     
     .topMovieGrayBtn {
         width: auto;
         text-align: left;
+        padding: 16px 24px;
+        font-size: 14px;
     }
 }
 
