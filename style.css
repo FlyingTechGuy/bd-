@@ -74,7 +74,7 @@ body {
 .hidden-layer {
     opacity: 0;
     pointer-events: none;
-    z-index: -1;
+    z-index: -5;
     transform: scale(1.05);
     filter: blur(20px);
     overflow: hidden;
@@ -82,7 +82,7 @@ body {
 .visible-layer {
     opacity: 1;
     pointer-events: auto;
-    z-index: 10;
+    z-index: 1000;
     transform: scale(1);
     filter: blur(0);
     overflow: auto;
@@ -682,7 +682,6 @@ body {
     font-size: 18px;
     font-weight: 700;
     font-family: var(--font-body);
-    text-transform: capitalize;
     border: none;
     color: #fff;
     border-radius: 16px;
@@ -787,6 +786,7 @@ body {
     height: 100%;
     object-fit: cover;
     background: linear-gradient(to right, var(--bg-dark), transparent, transparent, var(--bg-dark));
+    z-index: -1;
 }
 
 .appScreenBottomLg {
@@ -797,6 +797,7 @@ body {
     height: 100vh;
     object-fit: cover;
     background: linear-gradient(to top, var(--bg-dark), transparent);
+    z-index: -1;
 }
 
 .appScreenTopLg {
@@ -807,6 +808,7 @@ body {
     height: 50vh;
     object-fit: cover;
     background: linear-gradient(to bottom, #020617b9, transparent);
+    z-index: -1;
 }
 
 .appScreenSideLg {
@@ -817,6 +819,7 @@ body {
     height: 100vh;
     object-fit: cover;
     background: linear-gradient(to top right, #020617b9, transparent);
+    z-index: -1;
 }
 
 @keyframes bgZoomInOut {
@@ -837,7 +840,7 @@ body {
     left: 0;
     width: 100%;
     height: auto;
-    /* z-index: 10; */
+    z-index: 10;
     padding: 75px;
     margin-top: 2170px;
     display: flex;
@@ -1003,16 +1006,18 @@ body {
     width: 100%;
     padding: 10px 0px;
     margin-bottom: 40px;
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
 }
 
 .appScreenTypeBox::-webkit-scrollbar {
-    height: 3px;
+    height: 8px;
 }
 .appScreenTypeBox::-webkit-scrollbar-track {
     display: none;
 }
 .appScreenTypeBox::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.135);
+    background-color: rgba(255, 255, 255, 0.18);
     border-radius: 20px;
 }
 
@@ -1525,6 +1530,7 @@ body {
 
 .moreInfoRegInfoBoxLeft {
     position: sticky;
+    max-width: 250px;
     top: 35px;
     display: flex;
     align-items: start;
@@ -1659,8 +1665,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 20px;
-    padding: 20px;
+    gap: 15px;
+    padding: 15px;
     border-radius: 12px;
     transition: 0.3s;
     cursor: pointer;
@@ -1846,10 +1852,15 @@ body {
 
     .moreInfoSerEpisodeBox {
         padding-inline: 0px;
+        padding-left: 15px;
     }
     
-    .moreInfoSerEpisodeNum {
+    /* .moreInfoSerEpisodeNum {
         padding-left: 25px;
+    } */
+
+    .moreInfoSerEpisodeImg {
+        width: 64px;
     }
 }
 
@@ -1861,6 +1872,8 @@ body {
     .topMovieImg {
         width: 80%;
         max-width: 440px;
+        margin-bottom: 15px;
+        margin-left: -5px;
     }
 
     .topMovieDetailsBox {
