@@ -1901,6 +1901,7 @@ body {
     .moreInfoRegInfoBoxLeft {
         position: relative;
         width: 100%;
+        max-width: none;
         padding-bottom: 30px;
     }
 
