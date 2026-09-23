@@ -321,7 +321,7 @@ function selectUser(x) {
 // ================== \\
 
 const regInfo = [
-    {
+    { // 0
         title: "Karate Origin",
         subtitle: "Wave of a Soul",
         txt: "A young boy dreams of becoming a world karate champion, but his dream changes when he discovers a force that threatens to destroy the world and the only thing that will stop it is karate.",
@@ -338,10 +338,10 @@ const regInfo = [
         imax: "V",
         img: "src/karateoriginThumbnail.webp"
     },
-    {
+    { // 1
         title: "WAVI vs DOON",
         subtitle: "Live Fight",
-        txt: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.",
+        txt: "Two rivals. One ring. No mercy. One fight that will be remembered. Wavi and Doon finally come face to face in a battle fueled by rivalry, pride, and unfinished business. With the crowd roaring and everything on the line, only one will rise when the final bell rings.",
         director: 'Wavi, Doon',
         cast: 'Fishy, Wavi, Argie, Doon',
         photographer: 'Fishy, Argie',
@@ -355,13 +355,13 @@ const regInfo = [
         imax: "X",
         img: "src/wavivsdoonThumbnail.webp"
     },
-    {
+    { // 2
         title: "Wavi The Therapist",
         subtitle: "None",
         txt: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.",
         director: 'Wavi, Doon',
         cast: 'Wavi, Doon',
-        photographer: 'Argie',
+        photographer: 'Argie, Nuji',
         editor: 'Argie',
         genre: "Horror, Drama",
         type: "SHORT",
@@ -373,7 +373,7 @@ const regInfo = [
         img: "src/wavithetherapistThumbnail.webp",
         src: "https://www.youtube.com/embed/ni_PoWFpNFk?si=JdiXFvVw_xymqPMX"
     },
-    {
+    { // 3
         title: "One Night With Wavi",
         subtitle: "None",
         txt: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.",
@@ -390,7 +390,7 @@ const regInfo = [
         imax: "X",
         img: "src/onenightwithwaviThumbnail.webp"
     },
-    {
+    { // 4
         title: "Venom - Let the chase begin",
         subtitle: "None",
         txt: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.",
@@ -407,7 +407,24 @@ const regInfo = [
         imax: "X",
         img: "src/venomThumbnail.webp"
     },
-    {
+    { // 5
+        title: "First Day At The School",
+        subtitle: "None",
+        txt: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.",
+        director: 'Wavi, Doon',
+        cast: 'Wavi, Doon',
+        photographer: 'Fishy, Argie, Doon',
+        editor: 'Argie',
+        genre: "Horror, Drama",
+        type: "SHORT",
+        year: "2021",
+        age: "30+",
+        res: "V",
+        sound: "X",
+        imax: "X",
+        img: "src/tempThumbnail.webp"
+    },
+    { // 6
         title: "Joovin Everywhere",
         subtitle: "None",
         txt: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.",
@@ -422,36 +439,36 @@ const regInfo = [
         res: "V",
         sound: "X",
         imax: "X",
-        img: "src/wavivsdoonThumbnail.webp"
+        img: "src/tempThumbnail.webp"
     },
-    {
-        title: "First Day At School",
-        subtitle: "None",
-        txt: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.",
+    { // 7
+        title: "NIGGA vs CHEETAH",
+        subtitle: "Documentary",
+        txt: "Two runners. Two bloodlines. One finish line. From the wilds of Africa comes one of nature's fastest predators. From a family with roots across the same continent comes a Nigga who has spent his life chasing the impossible. Now, in a race unlike anything ever recorded, instinct meets determination as a Nigga takes on a cheetah in a head-to-head sprint. No shortcuts. No second chances. Just speed. For the cheetah, it's more than a race. For the Nigga, it may be the run of his life. Cheetah vs. Nigga — a raw documentary about speed, pride, and the question everyone wants answered: Can a Nigga outrun a cheetah?",
         director: 'Wavi, Doon',
-        cast: 'Wavi, Doon',
-        photographer: 'Fishy, Argie, Doon',
+        cast: 'Idan (Nigga), Cheetah',
+        photographer: 'Argie, Doon',
         editor: 'Argie',
-        genre: "Horror, Drama",
-        type: "SHORT",
-        year: "2021",
-        age: "30+",
+        genre: "Documentary",
+        type: "MOVIE",
+        year: "2026",
+        age: "13+",
         res: "V",
         sound: "X",
         imax: "X",
-        img: "src/wavivsdoonThumbnail.webp"
+        img: "src/niggavscheetahThumbnail.webp"
     }
 ];
 
 const serInfo = [
-    {
+    { // 0
         title: "BooDoon News",
         subtitle: "None",
         txt: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.",
         director: 'Wavi, Doon',
-        cast: 'Fishy, Wavi, Argie, Doon, Nuji',
-        photographer: 'Fishy, Argie',
-        editor: 'Argie',
+        cast: 'Fishy, Wavi, Argie, Doon, Idis, Noya, Nuji, Itush',
+        photographer: 'Argie, Doon, Idis, Noya',
+        editor: 'Argie, Doon',
         genre: "Comedy, Journalism",
         type: "SERIES",
         year: "2025",
@@ -460,9 +477,9 @@ const serInfo = [
         sound: "X",
         imax: "X",
         img: "src/boodoonnewsThumbnail.webp",
-        episodes: [["Episode I","25m 34s"],["Episode II","23m 48s"],["Episode III","27m 12s"],["Episode IV","21m 09s"],["Episode V","32m 29s"],["Episode VI","20m 17s","https://www.youtube.com/embed/C9XQAjCXpjo?si=jr4kZju8i6mu5xJc"]]
+        episodes: [["Episode 1","25m 34s","https://www.youtube.com/embed/ysoax1f6sXM?si=riUAa7rGohFhoouo"],["Episode 2","23m 48s"],["Episode 3","27m 12s"],["Episode 4","21m 09s"],["Episode 5","32m 29s"],["Episode 6","20m 51s","https://www.youtube.com/embed/ysoax1f6sXM?si=riUAa7rGohFhoouo"],["Episode 7","01h 02m 38s","https://www.youtube.com/embed/eEqXozkVGss?si=voZz6M5erevoMPLu"],["Episode 8","40m 43s"]] // ep.6old:https://www.youtube.com/embed/C9XQAjCXpjo?si=jr4kZju8i6mu5xJc
     },
-    {
+    { // 1
         title: "The Compacteam",
         subtitle: "Size Doesn't Matter",
         txt: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad iusto, culpa nam esse eius numquam, expedita distinctio aut perspiciatis magnam sint consectetur itaque! Odit ut quasi rem expedita consequatur aliquam.",
@@ -695,55 +712,116 @@ function logout() {
     document.getElementById("appScreenNavProfileDropdown").classList.toggle("show");
 }
 
+let posterCards = document.querySelectorAll(".appScreenHorizontalRect");
+function posterClick(xthis) {
+    for (let i = 0; i < posterCards.length; i++) {
+        posterCards[i].classList.remove("wide");
+    }
+    xthis.classList.add("wide");
+}
+document.getElementById("backclickposterbg").addEventListener("click", () => {
+    for (let i = 0; i < posterCards.length; i++) {
+        posterCards[i].classList.remove("wide");
+    }
+});
+
+document.getElementById("movieSlider").addEventListener('wheel', (event) => {
+  const isScrollableSlider = document.getElementById("movieSlider").scrollWidth > document.getElementById("movieSlider").clientWidth;
+  if (isScrollableSlider && event.deltaY !== 0) {
+    event.preventDefault();
+    document.getElementById("movieSlider").scrollTo({
+      left: document.getElementById("movieSlider").scrollLeft + event.deltaY
+    //   behavior: 'smooth'
+    });
+    // document.getElementById("movieSlider").scrollLeft += event.deltaY;
+  }
+});
+document.getElementById("shortSlider").addEventListener('wheel', (event) => {
+  const isScrollableSlider = document.getElementById("shortSlider").scrollWidth > document.getElementById("shortSlider").clientWidth;
+  if (isScrollableSlider && event.deltaY !== 0) {
+    event.preventDefault();
+    document.getElementById("shortSlider").scrollTo({
+      left: document.getElementById("shortSlider").scrollLeft + event.deltaY
+    //   behavior: 'smooth'
+    });
+  }
+});
+document.getElementById("seriesSlider").addEventListener('wheel', (event) => {
+  const isScrollableSlider = document.getElementById("seriesSlider").scrollWidth > document.getElementById("seriesSlider").clientWidth;
+  if (isScrollableSlider && event.deltaY !== 0) {
+    event.preventDefault();
+    document.getElementById("seriesSlider").scrollTo({
+      left: document.getElementById("seriesSlider").scrollLeft + event.deltaY
+    //   behavior: 'smooth'
+    });
+  }
+});
+document.getElementById("mylistSlider").addEventListener('wheel', (event) => {
+  const isScrollableSlider = document.getElementById("mylistSlider").scrollWidth > document.getElementById("mylistSlider").clientWidth;
+  if (isScrollableSlider && event.deltaY !== 0) {
+    event.preventDefault();
+    document.getElementById("mylistSlider").scrollTo({
+      left: document.getElementById("mylistSlider").scrollLeft + event.deltaY
+    //   behavior: 'smooth'
+    });
+  }
+});
+
 document.getElementById("moreInfoRegBgPress").addEventListener("click", function() {
     document.getElementById("moreInfoRegCont").classList.toggle("show");
+    setTimeout(() => {
+        document.getElementById("moreInfoSerCont").style.zIndex = -1;
+    }, 100);
 });
 
 let currentX;
 
 function toggleMoreInfoR(x) {
     currentX = x;
-    document.getElementById("moreInfoRegCont").classList.toggle("show");
-    if (document.getElementById("moreInfoRegCont").classList.contains("show")) {
-        document.getElementById("moreInfoRegTitle").innerHTML = regInfo[x].title;
-        if (regInfo[x].subtitle == "None") {
-            document.getElementById("moreInfoRegSubtitle").style.display = "none";
+    document.getElementById("moreInfoRegCont").style.zIndex = 1008;
+    setTimeout(() => {
+        document.getElementById("moreInfoRegCont").classList.toggle("show");
+        if (document.getElementById("moreInfoRegCont").classList.contains("show")) {
+            document.getElementById("moreInfoRegTitle").innerHTML = regInfo[x].title;
+            if (regInfo[x].subtitle == "None") {
+                document.getElementById("moreInfoRegSubtitle").style.display = "none";
+            } else {
+                document.getElementById("moreInfoRegSubtitle").style.display = "block";
+                document.getElementById("moreInfoRegSubtitle").innerHTML = regInfo[x].subtitle;
+            }
+            document.getElementById("moreInfoRegDescription").innerHTML = regInfo[x].txt;
+            document.getElementById("moreInfoRegDirector").innerHTML = regInfo[x].director;
+            document.getElementById("moreInfoRegCast").innerHTML = regInfo[x].cast;
+            document.getElementById("moreInfoRegPhotographer").innerHTML = regInfo[x].photographer;
+            document.getElementById("moreInfoRegEditor").innerHTML = regInfo[x].editor;
+            document.getElementById("moreInfoRegGenres").innerHTML = regInfo[x].genre;
+            document.getElementById("moreInfoRegType").innerHTML = regInfo[x].type;
+            document.getElementById("moreInfoRegYear").innerHTML = regInfo[x].year;
+            document.getElementById("moreInfoRegAge").innerHTML = regInfo[x].age;
+            document.getElementById("moreInfoRegImg").src = regInfo[x].img;
+            if (regInfo[x].res == "V") {
+                document.getElementById("moreInfoRegRes").style.display = "block";
+            } else {
+                document.getElementById("moreInfoRegRes").style.display = "none";
+            }
+            if (regInfo[x].sound == "V") {
+                document.getElementById("moreInfoRegSound").style.display = "block";
+            } else {
+                document.getElementById("moreInfoRegSound").style.display = "none";
+            }
+            if (regInfo[x].imax == "V") {
+                document.getElementById("moreInfoRegImax").style.display = "block";
+            } else {
+                document.getElementById("moreInfoRegImax").style.display = "none";
+            }
+            document.getElementById("saveBtnR").addEventListener("click", saveVideoRegFunc);
+            markSavedMoviesReg(x);
+            document.getElementById("playBtnR").addEventListener("click", toggleVideoBoxMoreR);
         } else {
-            document.getElementById("moreInfoRegSubtitle").style.display = "block";
-            document.getElementById("moreInfoRegSubtitle").innerHTML = regInfo[x].subtitle;
+            document.getElementById("saveBtnR").removeEventListener("click", saveVideoRegFunc);
+            document.getElementById("playBtnR").removeEventListener("click", toggleVideoBoxMoreR);
         }
-        document.getElementById("moreInfoRegDescription").innerHTML = regInfo[x].txt;
-        document.getElementById("moreInfoRegDirector").innerHTML = regInfo[x].director;
-        document.getElementById("moreInfoRegCast").innerHTML = regInfo[x].cast;
-        document.getElementById("moreInfoRegPhotographer").innerHTML = regInfo[x].photographer;
-        document.getElementById("moreInfoRegEditor").innerHTML = regInfo[x].editor;
-        document.getElementById("moreInfoRegGenres").innerHTML = regInfo[x].genre;
-        document.getElementById("moreInfoRegType").innerHTML = regInfo[x].type;
-        document.getElementById("moreInfoRegYear").innerHTML = regInfo[x].year;
-        document.getElementById("moreInfoRegAge").innerHTML = regInfo[x].age;
-        document.getElementById("moreInfoRegImg").src = regInfo[x].img;
-        if (regInfo[x].res == "V") {
-            document.getElementById("moreInfoRegRes").style.display = "block";
-        } else {
-            document.getElementById("moreInfoRegRes").style.display = "none";
-        }
-        if (regInfo[x].sound == "V") {
-            document.getElementById("moreInfoRegSound").style.display = "block";
-        } else {
-            document.getElementById("moreInfoRegSound").style.display = "none";
-        }
-        if (regInfo[x].imax == "V") {
-            document.getElementById("moreInfoRegImax").style.display = "block";
-        } else {
-            document.getElementById("moreInfoRegImax").style.display = "none";
-        }
-        document.getElementById("saveBtnR").addEventListener("click", saveVideoRegFunc);
-        markSavedMoviesReg(x);
-        document.getElementById("playBtnR").addEventListener("click", toggleVideoBoxMoreR);
-    } else {
-        document.getElementById("saveBtnR").removeEventListener("click", saveVideoRegFunc);
-        document.getElementById("playBtnR").removeEventListener("click", toggleVideoBoxMoreR);
-    }
+    }, 100);
 }
 
 let saveVideoRegFunc = () => {
@@ -752,64 +830,70 @@ let saveVideoRegFunc = () => {
 
 document.getElementById("moreInfoSerBgPress").addEventListener("click", function() {
     document.getElementById("moreInfoSerCont").classList.toggle("show");
+    setTimeout(() => {
+        document.getElementById("moreInfoSerCont").style.zIndex = -1;
+    }, 100);
 });
 
 function toggleMoreInfoS(x) {
     currentX = x;
-    document.getElementById("moreInfoSerCont").classList.toggle("show");
-    if (document.getElementById("moreInfoSerCont").classList.contains("show")) {
-        document.getElementById("moreInfoSerTitle").innerHTML = serInfo[x].title;
-        if (serInfo[x].subtitle == "None") {
-            document.getElementById("moreInfoSerSubtitle").style.display = "none";
-        } else {
-            document.getElementById("moreInfoSerSubtitle").style.display = "block";
-            document.getElementById("moreInfoSerSubtitle").innerHTML = serInfo[x].subtitle;
-        }
-        document.getElementById("moreInfoSerDescription").innerHTML = serInfo[x].txt;
-        document.getElementById("moreInfoSerDirector").innerHTML = serInfo[x].director;
-        document.getElementById("moreInfoSerCast").innerHTML = serInfo[x].cast;
-        document.getElementById("moreInfoSerPhotographer").innerHTML = serInfo[x].photographer;
-        document.getElementById("moreInfoSerEditor").innerHTML = serInfo[x].editor;
-        document.getElementById("moreInfoSerGenres").innerHTML = serInfo[x].genre;
-        document.getElementById("moreInfoSerType").innerHTML = serInfo[x].type;
-        document.getElementById("moreInfoSerYear").innerHTML = serInfo[x].year;
-        document.getElementById("moreInfoSerAge").innerHTML = serInfo[x].age;
-        document.getElementById("moreInfoSerImg").src = serInfo[x].img;
-        if (serInfo[x].res == "V") {
-            document.getElementById("moreInfoSerRes").style.display = "block";
-        } else {
-            document.getElementById("moreInfoSerRes").style.display = "none";
-        }
-        if (serInfo[x].sound == "V") {
-            document.getElementById("moreInfoSerSound").style.display = "block";
-        } else {
-            document.getElementById("moreInfoSerSound").style.display = "none";
-        }
-        if (serInfo[x].imax == "V") {
-            document.getElementById("moreInfoSerImax").style.display = "block";
-        } else {
-            document.getElementById("moreInfoSerImax").style.display = "none";
-        }
-        let seriesEpisodes = serInfo[x].episodes;
-        let seriesEpisodesCont = document.getElementById("moreInfoSerEpisodesBox");
-        seriesEpisodesCont.innerHTML = '';
-        for (let i = 0; i < seriesEpisodes.length; i++) {
-            seriesEpisodesCont.innerHTML += `
-            <div class="moreInfoSerEpisodeBox" onclick="toggleVideoBoxMoreS(${x}, ${i})">
-                <p class="moreInfoSerEpisodeNum">${i+1}</p>
-                <img src="${serInfo[x].img}" alt="" class="moreInfoSerEpisodeImg">
-                <div class="moreInfoSerEpisodeContentBox">
-                    <p class="moreInfoSerEpisodeTitle">${seriesEpisodes[i][0]}</p>
-                    <p class="moreInfoSerEpisodeTime">${seriesEpisodes[i][1]}</p>
+    document.getElementById("moreInfoSerCont").style.zIndex = 1008;
+    setTimeout(() => {
+        document.getElementById("moreInfoSerCont").classList.toggle("show");
+        if (document.getElementById("moreInfoSerCont").classList.contains("show")) {
+            document.getElementById("moreInfoSerTitle").innerHTML = serInfo[x].title;
+            if (serInfo[x].subtitle == "None") {
+                document.getElementById("moreInfoSerSubtitle").style.display = "none";
+            } else {
+                document.getElementById("moreInfoSerSubtitle").style.display = "block";
+                document.getElementById("moreInfoSerSubtitle").innerHTML = serInfo[x].subtitle;
+            }
+            document.getElementById("moreInfoSerDescription").innerHTML = serInfo[x].txt;
+            document.getElementById("moreInfoSerDirector").innerHTML = serInfo[x].director;
+            document.getElementById("moreInfoSerCast").innerHTML = serInfo[x].cast;
+            document.getElementById("moreInfoSerPhotographer").innerHTML = serInfo[x].photographer;
+            document.getElementById("moreInfoSerEditor").innerHTML = serInfo[x].editor;
+            document.getElementById("moreInfoSerGenres").innerHTML = serInfo[x].genre;
+            document.getElementById("moreInfoSerType").innerHTML = serInfo[x].type;
+            document.getElementById("moreInfoSerYear").innerHTML = serInfo[x].year;
+            document.getElementById("moreInfoSerAge").innerHTML = serInfo[x].age;
+            document.getElementById("moreInfoSerImg").src = serInfo[x].img;
+            if (serInfo[x].res == "V") {
+                document.getElementById("moreInfoSerRes").style.display = "block";
+            } else {
+                document.getElementById("moreInfoSerRes").style.display = "none";
+            }
+            if (serInfo[x].sound == "V") {
+                document.getElementById("moreInfoSerSound").style.display = "block";
+            } else {
+                document.getElementById("moreInfoSerSound").style.display = "none";
+            }
+            if (serInfo[x].imax == "V") {
+                document.getElementById("moreInfoSerImax").style.display = "block";
+            } else {
+                document.getElementById("moreInfoSerImax").style.display = "none";
+            }
+            let seriesEpisodes = serInfo[x].episodes;
+            let seriesEpisodesCont = document.getElementById("moreInfoSerEpisodesBox");
+            seriesEpisodesCont.innerHTML = '';
+            for (let i = 0; i < seriesEpisodes.length; i++) {
+                seriesEpisodesCont.innerHTML += `
+                <div class="moreInfoSerEpisodeBox" onclick="toggleVideoBoxMoreS(${x}, ${i})">
+                    <p class="moreInfoSerEpisodeNum">${i+1}</p>
+                    <img src="${serInfo[x].img}" alt="" class="moreInfoSerEpisodeImg">
+                    <div class="moreInfoSerEpisodeContentBox">
+                        <p class="moreInfoSerEpisodeTitle">${seriesEpisodes[i][0]}</p>
+                        <p class="moreInfoSerEpisodeTime">${seriesEpisodes[i][1]}</p>
+                    </div>
                 </div>
-            </div>
-            `;
+                `;
+            }
+            document.getElementById("saveBtnS").addEventListener("click", saveVideoSerFunc);
+            markSavedMoviesSer(x);
+        } else {
+            document.getElementById("saveBtnS").removeEventListener("click", saveVideoSerFunc);
         }
-        document.getElementById("saveBtnS").addEventListener("click", saveVideoSerFunc);
-        markSavedMoviesSer(x);
-    } else {
-        document.getElementById("saveBtnS").removeEventListener("click", saveVideoSerFunc);
-    }
+    }, 100);
 }
 
 let saveVideoSerFunc = () => {
@@ -832,6 +916,9 @@ function updateMyList() {
             case ("WAVI vs DOON"):
                 document.getElementById("WAVIvsDOON").classList.add("show");
                 break;
+            case ("NIGGA vs CHEETAH"):
+                document.getElementById("NiggaVsCheetah").classList.add("show");
+                break;
             case ("Wavi The Therapist"):
                 document.getElementById("WaviTheTherapist").classList.add("show");
                 break;
@@ -840,6 +927,9 @@ function updateMyList() {
                 break;
             case ("Venom - Let the chase begin"):
                 document.getElementById("Venom-LetTheChaseBegin").classList.add("show");
+                break;
+            case ("First Day At The School"):
+                document.getElementById("FirstDayAtTheSchool").classList.add("show");
                 break;
             case ("BooDoon News"):
                 document.getElementById("BooDoonNews").classList.add("show");
@@ -861,8 +951,19 @@ function updateMyList() {
     }
 }
 
+function pfe() {
+    let seriesEpisodes = serInfo[currentX].episodes;
+    if (seriesEpisodes[0][2] == null) {return}
+    document.getElementById("videoBoxSrc").src = seriesEpisodes[0][2];
+    document.getElementById("videoCont").style.zIndex = 1009;
+    setTimeout(function() {
+        document.getElementById("videoCont").classList.toggle("show");
+    }, 100);
+}
+
 function toggleVideoBoxR(xsrcid) {
     document.getElementById("videoBoxSrc").src = regInfo[xsrcid].src;
+    document.getElementById("videoCont").style.zIndex = 1009;
     setTimeout(function() {
         document.getElementById("videoCont").classList.toggle("show");
     }, 100);
@@ -871,6 +972,7 @@ function toggleVideoBoxR(xsrcid) {
 function toggleVideoBoxMoreR() {
     if (regInfo[currentX].src == null) {return}
     document.getElementById("videoBoxSrc").src = regInfo[currentX].src;
+    document.getElementById("videoCont").style.zIndex = 1009;
     setTimeout(function() {
         document.getElementById("videoCont").classList.toggle("show");
     }, 100);
@@ -880,6 +982,7 @@ function toggleVideoBoxMoreS(xid, xeps) {
     let seriesEpisodes = serInfo[xid].episodes;
     if (seriesEpisodes[xeps][2] == null) {return}
     document.getElementById("videoBoxSrc").src = seriesEpisodes[xeps][2];
+    document.getElementById("videoCont").style.zIndex = 1009;
     setTimeout(function() {
         document.getElementById("videoCont").classList.toggle("show");
     }, 100);
@@ -888,8 +991,14 @@ function toggleVideoBoxMoreS(xid, xeps) {
 document.getElementById("videoXmark").addEventListener("click", function() {
     document.getElementById("videoCont").classList.toggle("show");
     document.getElementById("videoBoxSrc").src = document.getElementById("videoBoxSrc").src;
+    setTimeout(function() {
+        document.getElementById("videoCont").style.zIndex = -1;
+    }, 100);
 });
 document.getElementById("videoContBgPress").addEventListener("click", function() {
     document.getElementById("videoCont").classList.toggle("show");
     document.getElementById("videoBoxSrc").src = document.getElementById("videoBoxSrc").src;
+    setTimeout(function() {
+        document.getElementById("videoCont").style.zIndex = -1;
+    }, 100);
 });

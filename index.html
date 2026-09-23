@@ -39,20 +39,20 @@
             <input type="text" name="username" id="username" class="addProfileInput" placeholder="Enter Username">
             <select name="profileImg" id="profileImg" class="addProfileInput">
                 <option value="-1" disabled selected>Choose Profile Image</option>
-                <option value="0">ahmadoon</option>
-                <option value="1">argietaychu</option>
-                <option value="2">ballman</option>
-                <option value="3">doon at the hotel</option>
-                <option value="4">doon the psychologist</option>
-                <option value="5">fishy the jurnalist</option>
-                <option value="6">idansun</option>
-                <option value="7">miwavi</option>
-                <option value="8">nujitsu</option>
-                <option value="9">rabi argie</option>
-                <option value="10">sushi</option>
-                <option value="11">the compacty</option>
-                <option value="12">wavi the rapist</option>
-                <option value="13">wavi the terapist</option>
+                <option value="0">Ahmadoon</option>
+                <option value="1">Argietaychu</option>
+                <option value="2">Ball-Man</option>
+                <option value="3">Doon at the Hotel</option>
+                <option value="4">Doon the Psychologist</option>
+                <option value="5">Fishy the Jurnalist</option>
+                <option value="6">Idan-San</option>
+                <option value="7">Miwavi</option>
+                <option value="8">Nujitsu</option>
+                <option value="9">Rabi Argie</option>
+                <option value="10">Sushi</option>
+                <option value="11">The Compacty</option>
+                <option value="12">Wavi the Rapist</option>
+                <option value="13">Wavi the Therapist</option>
             </select>
             <div class="addProfileBtnBox">
                 <button class="addUserCreate" onclick="addUser()">Create <span>Profile</span></button>
@@ -94,6 +94,7 @@
             <div class="appScreenSideLg"></div>
         </div>
         <div class="appScreenContentCont">
+            <div id="backclickposterbg"></div>
             <img src="src/karateOriginTitle.png" alt="Karate Origin Title" class="topMovieImg">
             <div class="topMovieDetailsBox">
                 <p class="topMovieBlueBoxTxt">TOP 1 MOVIE</p>
@@ -112,12 +113,13 @@
                 <button class="topMovieGrayBtn" onclick="toggleMoreInfoR(0)"><i class="fa-solid fa-circle-info" style="margin-right: 10px;"></i> More Info</button>
             </div>
             <p class="appScreenTypeTitle">Movies<span class="appScreenTpSpan" id="appScreenTpMovies"></span></p>
-            <div class="appScreenTypeBox">
-                <div class="appScreenHorizontalRect">
+            <div class="appScreenTypeBox" id="movieSlider">
+                <div class="appScreenHorizontalRect" onclick="posterClick(this)">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/karateoriginThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">Karate Origin</p>
-                        <p class="appScreenHorizontalRectSubtitle">Wave Of A Soul</p>
+                        <p class="appScreenHorizontalRectSubtitle">Wave of a Soul</p>
                         <div class="appScreenHorizontalRectInfoDetails">
                             <p class="appScreenHorizontalRectGreenTxt">99% Match</p>
                             <p class="appScreenHorizontalRectSepDot">•</p>
@@ -133,11 +135,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="appScreenHorizontalRect">
+                <div class="appScreenHorizontalRect" onclick="posterClick(this)">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/wavivsdoonThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">WAVI vs DOON</p>
-                        <p class="appScreenHorizontalRectSubtitle">The Final Round</p>
+                        <p class="appScreenHorizontalRectSubtitle">Live Fight</p>
                         <div class="appScreenHorizontalRectInfoDetails">
                             <p class="appScreenHorizontalRectGreenTxt">95% Match</p>
                             <p class="appScreenHorizontalRectSepDot">•</p>
@@ -151,10 +154,30 @@
                         </div>
                     </div>
                 </div>
+                <div class="appScreenHorizontalRect" onclick="posterClick(this)">
+                    <div class="appScreenHorizontalRectCover"></div>
+                    <img src="src/niggavscheetahThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">NIGGA vs CHEETAH</p>
+                        <p class="appScreenHorizontalRectSubtitle">Documentary</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">97% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2026</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(7)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <p class="appScreenTypeTitle">Shorts<span class="appScreenTpSpan" id="appScreenTpShorts"></span></p>
-            <div class="appScreenTypeBox">
-                <div class="appScreenHorizontalRect">
+            <div class="appScreenTypeBox" id="shortSlider">
+                <div class="appScreenHorizontalRect" onclick="posterClick(this)">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/wavithetherapistThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">Wavi The Therapist</p>
@@ -171,7 +194,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="appScreenHorizontalRect">
+                <div class="appScreenHorizontalRect" onclick="posterClick(this)">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/onenightwithwaviThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">One Night With Wavi</p>
@@ -188,7 +212,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="appScreenHorizontalRect">
+                <div class="appScreenHorizontalRect" onclick="posterClick(this)">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/venomThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">Venom - Let the chase begin</p>
@@ -205,10 +230,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="appScreenHorizontalRect" onclick="posterClick(this)">
+                    <div class="appScreenHorizontalRectCover"></div>
+                    <img src="src/tempThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">First Day At The School</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">96% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2021</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(5)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <p class="appScreenTypeTitle">Series<span class="appScreenTpSpan" id="appScreenTpSeries"></span></p>
-            <div class="appScreenTypeBox">
-                <div class="appScreenHorizontalRect">
+            <div class="appScreenTypeBox" id="seriesSlider">
+                <div class="appScreenHorizontalRect" onclick="posterClick(this)">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/boodoonnewsThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">BooDoon News</p>
@@ -224,7 +268,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="appScreenHorizontalRect">
+                <div class="appScreenHorizontalRect" onclick="posterClick(this)">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/compacteamThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">The Compacteam</p>
@@ -243,9 +288,10 @@
                 </div>
             </div>
             <p class="appScreenTypeTitle">My List<span class="appScreenTpSpan" id="appScreenTpMyList"></span></p>
-            <div class="appScreenTypeBox">
+            <div class="appScreenTypeBox" id="mylistSlider">
                 <p id="appScreenMyListEmptyMsg">Your list is empty...<br>Save videos to watch them later!</p>
-                <div class="appScreenHorizontalRect savedVideoCard" id="KarateOrigin">
+                <div class="appScreenHorizontalRect savedVideoCard" onclick="posterClick(this)" id="KarateOrigin">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/karateoriginThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">Karate Origin</p>
@@ -265,11 +311,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="appScreenHorizontalRect savedVideoCard" id="WAVIvsDOON">
+                <div class="appScreenHorizontalRect savedVideoCard" onclick="posterClick(this)" id="WAVIvsDOON">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/wavivsdoonThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">WAVI vs DOON</p>
-                        <p class="appScreenHorizontalRectSubtitle">The Final Round</p>
+                        <p class="appScreenHorizontalRectSubtitle">Live Fight</p>
                         <div class="appScreenHorizontalRectInfoDetails">
                             <p class="appScreenHorizontalRectGreenTxt">95% Match</p>
                             <p class="appScreenHorizontalRectSepDot">•</p>
@@ -283,7 +330,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="appScreenHorizontalRect savedVideoCard" id="WaviTheTherapist">
+                <div class="appScreenHorizontalRect savedVideoCard" onclick="posterClick(this)" id="NiggaVsCheetah">
+                    <div class="appScreenHorizontalRectCover"></div>
+                    <img src="src/niggavscheetahThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">NIGGA vs CHEETAH</p>
+                        <p class="appScreenHorizontalRectSubtitle">Documentary</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">97% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2026</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(7)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect savedVideoCard" onclick="posterClick(this)" id="WaviTheTherapist">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/wavithetherapistThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">Wavi The Therapist</p>
@@ -300,7 +367,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="appScreenHorizontalRect savedVideoCard" id="OneNightWithWavi">
+                <div class="appScreenHorizontalRect savedVideoCard" onclick="posterClick(this)" id="OneNightWithWavi">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/onenightwithwaviThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">One Night With Wavi</p>
@@ -317,7 +385,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="appScreenHorizontalRect savedVideoCard" id="Venom-LetTheChaseBegin">
+                <div class="appScreenHorizontalRect savedVideoCard" onclick="posterClick(this)" id="Venom-LetTheChaseBegin">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/venomThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">Venom - Let the chase begin</p>
@@ -334,7 +403,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="appScreenHorizontalRect savedVideoCard" id="BooDoonNews">
+                <div class="appScreenHorizontalRect savedVideoCard" onclick="posterClick(this)" id="FirstDayAtTheSchool">
+                    <div class="appScreenHorizontalRectCover"></div>
+                    <img src="src/tempThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
+                    <div class="appScreenHorizontalRectBox">
+                        <p class="appScreenHorizontalRectTitle">First Day At The School</p>
+                        <div class="appScreenHorizontalRectInfoDetails">
+                            <p class="appScreenHorizontalRectGreenTxt">96% Match</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectBlueTxt">2021</p>
+                            <p class="appScreenHorizontalRectSepDot">•</p>
+                            <p class="appScreenHorizontalRectGrayBoxTxt">4K</p>
+                        </div>
+                        <div class="appScreenHorizontalRectBtnBox">
+                            <button class="appScreenHorizontalRectBlueBtn" onclick=""><i class="fa-solid fa-circle-play"></i></button>
+                            <button class="appScreenHorizontalRectGrayBtn" onclick="toggleMoreInfoR(5)"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="appScreenHorizontalRect savedVideoCard" onclick="posterClick(this)" id="BooDoonNews">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/boodoonnewsThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">BooDoon News</p>
@@ -350,7 +438,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="appScreenHorizontalRect savedVideoCard" id="TheCompacteam">
+                <div class="appScreenHorizontalRect savedVideoCard" onclick="posterClick(this)" id="TheCompacteam">
+                    <div class="appScreenHorizontalRectCover"></div>
                     <img src="src/compacteamThumbnail.webp" alt="" class="appScreenHorizontalRectImg">
                     <div class="appScreenHorizontalRectBox">
                         <p class="appScreenHorizontalRectTitle">The Compacteam</p>
@@ -375,20 +464,20 @@
             <p class="changeProfilePicTitle">Change Profile Picture</p>
             <select name="profilePic" id="profilePic" class="changeProfilePicInput">
                 <option value="-1" disabled selected>Choose Profile Image</option>
-                <option value="0">ahmadoon</option>
-                <option value="1">argietaychu</option>
-                <option value="2">ballman</option>
-                <option value="3">doon at the hotel</option>
-                <option value="4">doon the psychologist</option>
-                <option value="5">fishy the jurnalist</option>
-                <option value="6">idansun</option>
-                <option value="7">miwavi</option>
-                <option value="8">nujitsu</option>
-                <option value="9">rabi argie</option>
-                <option value="10">sushi</option>
-                <option value="11">the compacty</option>
-                <option value="12">wavi the rapist</option>
-                <option value="13">wavi the terapist</option>
+                <option value="0">Ahmadoon</option>
+                <option value="1">Argietaychu</option>
+                <option value="2">Ball-Man</option>
+                <option value="3">Doon at the Hotel</option>
+                <option value="4">Doon the Psychologist</option>
+                <option value="5">Fishy the Jurnalist</option>
+                <option value="6">Idan-San</option>
+                <option value="7">Miwavi</option>
+                <option value="8">Nujitsu</option>
+                <option value="9">Rabi Argie</option>
+                <option value="10">Sushi</option>
+                <option value="11">The Compacty</option>
+                <option value="12">Wavi the Rapist</option>
+                <option value="13">Wavi the Therapist</option>
             </select>
             <div class="changeProfilePicBtnBox">
                 <button class="addUserCreate" onclick="saveProfilePic()">Save</button>
@@ -448,7 +537,7 @@
                     <p id="moreInfoSerTitle">BooDoon News</p>
                     <p id="moreInfoSerSubtitle">BooDoon News</p>
                     <div class="moreInfoRegBtnBox">
-                        <button class="moreInfoRegBlueBtn" onclick=""><i class="fa-solid fa-play" style="margin-right: 10px;"></i> Play First Episode</button>
+                        <button class="moreInfoRegBlueBtn" onclick="pfe()"><i class="fa-solid fa-play" style="margin-right: 10px;"></i> Play First Episode</button>
                         <button class="moreInfoRegGrayBtn" id="saveBtnS" onclick=""><i class="fa-regular fa-bookmark"></i></button>
                     </div>
                 </div>
