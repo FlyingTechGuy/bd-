@@ -727,7 +727,7 @@ document.getElementById("backclickposterbg").addEventListener("click", () => {
 
 document.getElementById("movieSlider").addEventListener('wheel', (event) => {
   const isScrollableSlider = document.getElementById("movieSlider").scrollWidth > document.getElementById("movieSlider").clientWidth;
-  if (isScrollableSlider && event.deltaY !== 0) {
+  if (isScrollableSlider && event.deltaY !== 0 && window.innerWidth > 1050) {
     event.preventDefault();
     document.getElementById("movieSlider").scrollTo({
       left: document.getElementById("movieSlider").scrollLeft + event.deltaY
@@ -738,7 +738,7 @@ document.getElementById("movieSlider").addEventListener('wheel', (event) => {
 });
 document.getElementById("shortSlider").addEventListener('wheel', (event) => {
   const isScrollableSlider = document.getElementById("shortSlider").scrollWidth > document.getElementById("shortSlider").clientWidth;
-  if (isScrollableSlider && event.deltaY !== 0) {
+  if (isScrollableSlider && event.deltaY !== 0 && window.innerWidth > 1050) {
     event.preventDefault();
     document.getElementById("shortSlider").scrollTo({
       left: document.getElementById("shortSlider").scrollLeft + event.deltaY
@@ -748,7 +748,7 @@ document.getElementById("shortSlider").addEventListener('wheel', (event) => {
 });
 document.getElementById("seriesSlider").addEventListener('wheel', (event) => {
   const isScrollableSlider = document.getElementById("seriesSlider").scrollWidth > document.getElementById("seriesSlider").clientWidth;
-  if (isScrollableSlider && event.deltaY !== 0) {
+  if (isScrollableSlider && event.deltaY !== 0 && window.innerWidth > 1050) {
     event.preventDefault();
     document.getElementById("seriesSlider").scrollTo({
       left: document.getElementById("seriesSlider").scrollLeft + event.deltaY
@@ -758,7 +758,7 @@ document.getElementById("seriesSlider").addEventListener('wheel', (event) => {
 });
 document.getElementById("mylistSlider").addEventListener('wheel', (event) => {
   const isScrollableSlider = document.getElementById("mylistSlider").scrollWidth > document.getElementById("mylistSlider").clientWidth;
-  if (isScrollableSlider && event.deltaY !== 0) {
+  if (isScrollableSlider && event.deltaY !== 0 && window.innerWidth > 1050) {
     event.preventDefault();
     document.getElementById("mylistSlider").scrollTo({
       left: document.getElementById("mylistSlider").scrollLeft + event.deltaY
