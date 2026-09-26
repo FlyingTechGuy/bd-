@@ -1006,7 +1006,7 @@ body {
     width: 100%;
     padding: 10px 0px;
     margin-bottom: 40px;
-    touch-action: pan-x;
+    /* touch-action: pan-x; */
     -webkit-overflow-scrolling: touch;
 }
 
