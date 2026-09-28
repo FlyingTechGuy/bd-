@@ -1809,7 +1809,7 @@ body {
 .videoCont.show {
     opacity: 1;
     pointer-events: auto;
-    z-index: 1009;
+    /* z-index: 1009; */
     transform: scale(1);
 }
 

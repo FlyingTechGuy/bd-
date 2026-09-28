@@ -958,7 +958,7 @@ function pfe() {
     document.getElementById("videoCont").style.zIndex = 1009;
     setTimeout(function() {
         document.getElementById("videoCont").classList.toggle("show");
-    }, 100);
+    }, 300);
 }
 
 function toggleVideoBoxR(xsrcid) {
@@ -966,7 +966,7 @@ function toggleVideoBoxR(xsrcid) {
     document.getElementById("videoCont").style.zIndex = 1009;
     setTimeout(function() {
         document.getElementById("videoCont").classList.toggle("show");
-    }, 100);
+    }, 300);
 }
 
 function toggleVideoBoxMoreR() {
@@ -975,7 +975,7 @@ function toggleVideoBoxMoreR() {
     document.getElementById("videoCont").style.zIndex = 1009;
     setTimeout(function() {
         document.getElementById("videoCont").classList.toggle("show");
-    }, 100);
+    }, 300);
 }
 
 function toggleVideoBoxMoreS(xid, xeps) {
@@ -985,7 +985,7 @@ function toggleVideoBoxMoreS(xid, xeps) {
     document.getElementById("videoCont").style.zIndex = 1009;
     setTimeout(function() {
         document.getElementById("videoCont").classList.toggle("show");
-    }, 100);
+    }, 300);
 }
 
 document.getElementById("videoXmark").addEventListener("click", function() {
@@ -993,12 +993,12 @@ document.getElementById("videoXmark").addEventListener("click", function() {
     document.getElementById("videoBoxSrc").src = document.getElementById("videoBoxSrc").src;
     setTimeout(function() {
         document.getElementById("videoCont").style.zIndex = -1;
-    }, 100);
+    }, 300);
 });
 document.getElementById("videoContBgPress").addEventListener("click", function() {
     document.getElementById("videoCont").classList.toggle("show");
     document.getElementById("videoBoxSrc").src = document.getElementById("videoBoxSrc").src;
     setTimeout(function() {
         document.getElementById("videoCont").style.zIndex = -1;
-    }, 100);
+    }, 300);
 });
